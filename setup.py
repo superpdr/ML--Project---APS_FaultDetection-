@@ -3,7 +3,7 @@ from setuptools import find_packages,setup
 from typing import List
 
 REQUIREMENT_FILE_NAME = "requirements.txt"
-HYPHEN_E_DOT = "-e."
+HYPHEN_E_DOT = "-e ."
 
 def get_requirements()->List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
@@ -13,13 +13,6 @@ def get_requirements()->List[str]:
     if HYPHEN_E_DOT in requirement_list:
         requirement_list.remove(HYPHEN_E_DOT)
     return requirement_list
-
-    
-
-        
-
-    
-
 
 setup(
         name="sensor",
